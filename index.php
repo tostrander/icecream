@@ -9,7 +9,7 @@
     <title>Ice Cream Shoppe</title>
 </head><body>
 <div class="container">
-    <h1>Welcome to my Ice Cream Shoppe!</h1>
+    <h1>Welcome to my Ice Cream Shoppe</h1>
     <form action="process.php" method="post">
 
         <h3>Choose a flavor</h3>
