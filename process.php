@@ -21,9 +21,11 @@
         define('SALES_TAX_RATE', 0.11);
 
         //For testing purposes only
+        /*
         echo "<pre>";
         var_dump($_POST);
         echo "</pre>";
+        */
 
         //Get data from POST array
         if (!empty($_POST['scoops'])){
