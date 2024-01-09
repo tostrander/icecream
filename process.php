@@ -9,6 +9,26 @@
 </head>
 <body>
     <h1>Thank you for your order!</h1>
+
+    <?php
+        //For testing purposes only
+        echo "<pre>";
+        var_dump($_POST);
+        echo "</pre>";
+
+        //Get data from POST array
+        $scoops = $_POST['scoops'];
+        $flavors = $_POST['flavor'];
+        $flavorString = implode(", ", $flavors);
+        $cone = $_POST['cone'];
+
+        //Print a summary
+        echo "<p>$scoops scoops</p>";
+        echo "<p>Flavors: $flavorString</p>";
+        echo "<p>Cone: $cone</p>";
+
+    ?>
+
 </body>
 </html>
-<?php
+
