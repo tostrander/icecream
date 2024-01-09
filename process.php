@@ -36,14 +36,20 @@
 
         if (isset($_POST['flavor'])){
             $flavors = $_POST['flavor'];
+            $flavorString = implode(", ", $flavors);
         }
         else {
             echo "<p>Please select at least one flavor</p>";
             return;
         }
 
-        $flavorString = implode(", ", $flavors);
-        $cone = $_POST['cone'];
+        if (isset($_POST['cone'])){
+            $cone = $_POST['cone'];
+        }
+        else {
+            echo "<p>Please select a cone</p>";
+            return;
+        }
 
         //Calculate total due
         $subtotal = PRICE_PER_SCOOP * $scoops;
