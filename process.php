@@ -26,8 +26,22 @@
         echo "</pre>";
 
         //Get data from POST array
-        $scoops = $_POST['scoops'];
-        $flavors = $_POST['flavor'];
+        if (!empty($_POST['scoops'])){
+            $scoops = $_POST['scoops'];
+        }
+        else {
+            echo "<p>Enter scoops!</p>";
+            return;
+        }
+
+        if (isset($_POST['flavor'])){
+            $flavors = $_POST['flavor'];
+        }
+        else {
+            echo "<p>Please select at least one flavor</p>";
+            return;
+        }
+
         $flavorString = implode(", ", $flavors);
         $cone = $_POST['cone'];
 
